@@ -2,11 +2,10 @@ html, body {
    font-family: Arial, Helvetica, sans-serif;
    font-size: 15px;
    line-height: 1.5;
-   background-color: #000;
+   background-color: #fff;
 }
 
 body{
-    background-color: #000ß;
     padding:20px 20px;
     margin:auto;
     left:0;
@@ -16,17 +15,15 @@ body{
     height:0px
 }
 
+
 header{
-   max-width:1280px;
+   max-width: 100%;
    background: #000;
-   padding:10px 30px;
-   margin:auto;
    position:fixed;
    left:0;
    right:0;
    top:0;
-   z-index:999;
-   height:40px
+   height:50px
 }
 
 .logo {
@@ -39,22 +36,30 @@ header{
    font-size:24px;
 }
 
-nav > a {
-   color:#FFF;
-}
-
 .languages{
-   float:right;
-   padding:10px;
-   color: white;
+   padding:14px;
 }
 .languages a{
-   display:inline-block;
-   padding:2px;
    color:#FFF;
    text-decoration:none;
    font-size:15px;
-   vertical-align:middle;
+}
+.languages a:hover{
+   text-decoration:underline;
+}
+
+.main-menu{
+   font-size:18px;
+   padding-top: 12px;
+}
+.main-menu a{
+   color:#FFF;
+   padding-left:18px;
+   text-decoration:none;
+}
+.main-menu a:hover{
+   color: rgb(193, 246, 246);
+   text-decoration:underline;
 }
 
 .social-media{
@@ -63,8 +68,7 @@ nav > a {
    color: white;
 }
 .social-media a{
-   display:inline-block;
-   padding-top: 4px;
+   padding-top: 5px;
    padding-left:10px;
    height:20px;
    color:#FFF;
@@ -74,23 +78,23 @@ nav > a {
 }
 
 h1{font-size:25px}
-h2{font-size:21px}
+
+h2{
+   font-size:21px;
+}
+h2 > a {
+   color:rgb(51, 84, 98);
+   text-decoration:none; 
+}
+h2 > a:hover {
+   text-decoration:underline; 
+}
+
 h3{font-size:18px}
 h4{font-size:16px}
 
-.container{
-   display: flex;
-   flex-direction: row;
-   grid-template-columns: auto;
-}
-.item {
-   width: 20%;
-}
-
-#wrapall{
-   background-color: #FFF;
-   max-width:1280px;
-   margin:0 auto;
+.avatar img {
+    border-radius: 100%;
 }
 
 #page{
@@ -99,7 +103,6 @@ h4{font-size:16px}
    padding-left: 20px;
    padding-right: 20px;
    margin:0px;
-   margin-left:320px;
    margin-right: 60px;
 }
 
@@ -117,16 +120,14 @@ h4{font-size:16px}
 
 
 footer {
-   background-color: #FFF;
    color: rgb(50, 50, 50);
-   font-size: 11px;
-   padding: 20px;
-   margin:0px;
+   font-size: 12px;
    text-align: center;
+   padding: 10px;
 }
 
 footer> hr{
-   width: 80%;
+   width: 90%;
    display: flex;
 }
 
