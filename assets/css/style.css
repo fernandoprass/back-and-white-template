@@ -47,25 +47,26 @@ main {
 }
 
 footer {
-   align-self: baseline;
-   color: rgb(229, 226, 226);
+   color: rgb(155, 151, 151);
    font-size: 12px;
    text-align: center;
-   max-width: 100%;
-   background: #000;
-   left:0;
    height: 50px;
-   right:0;
+   margin-bottom: 10px;
 }
 
-.logo {
-   margin-left: 10px;
-   display:inline-block;
-   padding:4px;
-   height:20px;
-   color:#FFF;
-   text-decoration:none;
-   font-size:24px;
+.avatar img {
+   border-radius: 100%;
+}
+
+.bio{
+   color: rgb(57, 57, 57);
+   font-style: italic;
+   padding-top: 15px;
+   padding-bottom: 5px;
+}
+
+.categories {
+   margin-top: 15px;
 }
 
 .languages{
@@ -80,11 +81,14 @@ footer {
    text-decoration:underline;
 }
 
-.bio{
-   color: rgb(57, 57, 57);
-   font-style: italic;
-   padding-top: 15px;
-   padding-bottom: 5px;
+.logo {
+   margin-left: 10px;
+   display:inline-block;
+   padding:4px;
+   height:20px;
+   color:#FFF;
+   text-decoration:none;
+   font-size:24px;
 }
 
 .location{
@@ -123,8 +127,8 @@ footer {
    vertical-align:middle;
 }
 
-.avatar img {
-    border-radius: 100%;
+.tags {
+   margin-top: 15px;
 }
 
 #page{
