@@ -30,11 +30,11 @@ h1{font-size:25px}
 h2{
    font-size:21px;
 }
-h2 > a {
+h2 a{
    color:rgb(51, 84, 98);
    text-decoration:none; 
 }
-h2 > a:hover {
+h2 a:hover{
    text-decoration:underline; 
 }
 
@@ -67,6 +67,25 @@ footer {
 
 .categories {
    margin-top: 15px;
+}
+
+.titles {
+   margin-left: 5px;
+   margin-top: 15px;
+   font-size:18px;
+   font-weight:bold;
+}
+
+.categories a {
+   padding-top: 5px;
+   text-decoration:none;
+   font-size:15px;
+   color:rgb(51, 84, 98);
+   text-decoration:none; 
+}
+
+.categories a:hover {
+   text-decoration:underline; 
 }
 
 .languages{
@@ -131,8 +150,31 @@ footer {
    margin-top: 15px;
 }
 
+.tags a {
+   padding-top: 5px;
+   text-decoration:none;
+   font-size:15px;
+   color:rgb(51, 84, 98);
+   text-decoration:none; 
+}
+
+.tags a:hover {
+   text-decoration:underline; 
+}
+
+.title {
+   margin-left: 5px;
+   margin-top: 15px;
+   font-size:18px;
+   font-weight:bold;
+}
+
 #page{
    background-color: #FFF;
+}
+
+.vl {
+   border-left: 1px solid #000;
 }
 
 #sidebar {
@@ -144,8 +186,4 @@ footer {
    float: left;
    z-index: 1;
    width:299px;
-}
-
-.vl {
-   border-left: 1px solid #000;
 }
