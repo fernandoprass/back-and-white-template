@@ -1,0 +1,33 @@
+{
+	"languages": ["en", "pt-br"],
+	"IndexHtmlFiles": [{
+			"Order": "1",
+			"FileName": "head.html"
+		},
+		{
+			"Order": "2",
+			"FileName": "header.html"
+		},
+		{
+			"Order": "3",
+			"FileName": "page.html"
+		}
+	],
+	"ContentHtmlFiles": "",
+	"ContecListHtmlFiles": "",
+	"LoopsHtmlFiles": {
+		"Content": "loop.content.html",
+		"ContentArchive": "loop.content.archive.html",
+		"ContentCategories": "loop.content.categories.html",
+		"ContentLastFive": "loop.content.last.five.html",
+		"ContentLastThree": "loop.content.last.three.html",
+		"ContentLastOne": "loop.content.last.one.html",
+		"ContentTags": "loop.content.tags.html",
+		"ContentReferences": "loop.content.references.html",
+		"Languages": "loop.languages.html",
+		"Menus": [{
+			"Name": "main",
+			"FileName": "loop.menu.main.html"
+		}]
+	}
+}
