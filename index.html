@@ -34,7 +34,6 @@
             <nav class="main-menu">                 
                <ul>
                   {@loop.menu.main}
-                  <li><i class="{@loop.icon}"></i><a href="{@loop.link}">{@loop.title}</a></li>
                </ul>
             </nav>
           </div>
@@ -42,7 +41,6 @@
             <div class="social-media">
                <ul>
                   {@loop.socialMedia}
-                  <li><a href="{@loop.link}" class="{@loop.icon}" target="_blank"></a></li>
                </ul>
             </div>
           </div> 
@@ -50,7 +48,6 @@
             <nav class="languages">
                <ul>
                   {@loop.languages}
-                  <li><a href="{@loop.link}">{@loop.title}</a></li>
                </ul>
             </nav>
           </div>
@@ -77,30 +74,23 @@
 
                   <div class="categories">                      
                      <div class="title"><i class="fa-solid fa-folder-tree"></i> {:archive}</div>
-                     {@loop.archive}
-                     <div><a href="{@loop.link}">{@loop.title}</a></div>
+                     {@loop.blog.archive}
                   </div>
 
                   <div class="categories">
                      <div class="title"><i class="fa-solid fa-list-ul"></i> {:categories}</div>
-                     {@loop.categories}
-                     <div><a href="{@loop.link}">{@loop.title}</a></div>
+                     {@loop.blog.categories}
                   </div>
 
                   <div class="tags">
                      <div class="title"><i class="fa-solid fa-tags"></i> {:tags}</div>
-                     {@loop.tags}
-                     <div><a href="{@loop.link}">{@loop.title}</a></div>
+                     {@loop.blog.tags}
                   </div>
                </aside>
             </div>
             <div class="col-md-9 vl">
                <main>
-                  {@loop.posts}
-                  <article>
-                     <h2><a href="{@loop.link}">{@loop.title}</a></h2>
-                     <p>{@loop.description}</p>
-                  </article>
+                  {@loop.blog.posts.last10}
                </main>	  
                
                <footer>
