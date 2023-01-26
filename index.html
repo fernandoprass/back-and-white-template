@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{@site.language}">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="robots" content="index, follow" />
 
-   <title>Simple Website Template with Sticky Sidebar</title>
-   <meta name="description" content="Free  website HTML theme for Kennis ">
+   <title>{@site.name}</title>
+   <meta name="description" content="{@site.description}" />
+   <meta name="author" content="{@site.author}" />
+   <meta name="keywords" content="{@site.keywords}" />
+   <meta name = "revised" content="{@site.modified}" />
 
-   <link rel="stylesheet" href="/assets/css/header.css">
-   <link rel="stylesheet" href="/assets/css/style.css">
-   <script src="/assets/css/script.js"></script>
+   <link rel="stylesheet" href="/assets/css/header.css" />
+   <link rel="stylesheet" href="/assets/css/style.css" />
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+   <script src="/assets/css/script.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </head>
@@ -23,32 +28,29 @@
       <div class="container-xl">
         <div class="row">
           <div class="col-md-3">
-            <span class="logo">Site Name</span>
+            <span class="logo">{@site.name}</span>
           </div>
           <div class="col-md-6">
             <nav class="main-menu">                 
                <ul>
-                  <li><i class="fa-fw fas fa-home main-menu-icon"></i><a href="#">Home</a></li>
-                  <li><i class="fa-solid fa-blog main-menu-icon"></i><a href="#">Blog</a></li>
-                  <li><i class="fa-solid fa-wand-magic-sparkles main-menu-icon"></i><a href="#">Kennis</a></li>
-                  <li><i class="fa-fw fas fa-info-circle main-menu-icon"></i><a href="#">About</a></li>
+                  {@loop.menu.main}
+                  <li><i class="{@loop.icon}"></i><a href="{@loop.link}">{@loop.title}</a></li>
                </ul>
             </nav>
           </div>
           <div class="col-md-2">
             <div class="social-media">
                <ul>
-                  <li><a href="#" class="fa-brands fa-github" target="_blank"></a></li>
-                  <li><a href="#" class="fa-brands fa-linkedin" target="_blank"></a></li>
-                  <li><a href="#" class="fa-brands fa-twitter" target="_blank"></a></li>
+                  {@loop.socialMedia}
+                  <li><a href="{@loop.link}" class="{@loop.icon}" target="_blank"></a></li>
                </ul>
             </div>
           </div> 
           <div class="col-md-1">
             <nav class="languages">
                <ul>
-                  <li><a href="#">EN</a></li>
-                  <li><a href="#">PT</a></li>
+                  {@loop.languages}
+                  <li><a href="{@loop.link}">{@loop.title}</a></li>
                </ul>
             </nav>
           </div>
@@ -62,93 +64,42 @@
             <div class="col-md-3">
                <aside class="text-left">                     
                   <div class="avatar text-center">
-                     <img src="/assets/images/avatar.png">
+                     <img src="{@author.avatar}">
                   </div>
                   
                   <div class="bio">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae unde sed similique. Assumenda dolore nisi dolorum libero! Nihil, fuga itaque. Ipsum eligendi voluptatibus consequatur voluptatem totam nesciunt saepe doloremque atque eveniet, amet in reprehenderit asperiores non alias, itaque sed? Aliquid fuga nulla dicta ex et delectus ad, ipsum sed magnam soluta fugit nam dolorem asperiores necessitatibus repellat doloremque natus, voluptate sit veritatis.
+                     {@author.bio}
                   </div>
 
                   <div class="location">
-                     <i class="fa-solid fa-location-dot"></i>  
-                     Dublin - Ireland
+                     <i class="fa-solid fa-location-dot"></i> {@author.location}
                   </div>
 
                   <div class="categories">                      
-                     <i class="fa-solid fa-folder-tree"></i><span class="title">Archive</span>
-                     <div><a href="#">2023 - February (10)</a></div>
-                     <div><a href="#">2023 - January (27)</a></div>
-                     <div><a href="#">2022 - December (15)</a></div>
-                     <div><a href="#">2022 - November (18)</a></div>
+                     <div class="title"><i class="fa-solid fa-folder-tree"></i> {:archive}</div>
+                     {@loop.archive}
+                     <div><a href="{@loop.link}">{@loop.title}</a></div>
                   </div>
 
                   <div class="categories">
-                     
-                     <i class="fa-solid fa-list-ul"></i><span class="title">Categories</span>
-                     <div><a href="#">Mollis moderatius (10)</a></div>
-                     <div><a href="#">Ex ignota epicurei (7)</a></div>
-                     <div><a href="#">Stet facilis ius te (15)</a></div>
-                     <div><a href="#">His at autem inani (1)</a></div>
-                     <div><a href="#">Ex ignota epicurei quo (2)</a></div>
-                     <div><a href="#">Assumenda dolore (12)</a></div>
-                     <div><a href="#">His at volutpat (2)</a></div>
-                     <div><a href="#">Voluptate sit veritatis (7)</a></div>
-                     <div><a href="#">Consectetur adipisicing (5)</a></div>
-                     <div><a href="#">Asperiores non alias (3)</a></div>
+                     <div class="title"><i class="fa-solid fa-list-ul"></i> {:categories}</div>
+                     {@loop.categories}
+                     <div><a href="{@loop.link}">{@loop.title}</a></div>
                   </div>
 
                   <div class="tags">
-                     <i class="fa-solid fa-tags"></i><span class="title">Tags</span><br>
-                     <span><a href="#">Mollis (10)</a></span> &nbsp;
-                     <span><a href="#">Epicurei (7)</a></span> &nbsp;
-                     <span><a href="#">Stet (15)</a></span> &nbsp;
-                     <span><a href="#">Autem inani (1)</a></span> &nbsp;
-                     <span><a href="#">Ex ignota epicurei quo (2)</a></span> &nbsp;
-                     <span><a href="#">Assumenda (12)</a></span> &nbsp;
-                     <span><a href="#">His at (2)</a></span> &nbsp;
-                     <span><a href="#">Voluptate (7)</a></span> &nbsp;
-                     <span><a href="#">Consectetur (5)</a></span> &nbsp;
-                     <span><a href="#">Asperiores (3)</a></span>
+                     <div class="title"><i class="fa-solid fa-tags"></i> {:tags}</div>
+                     {@loop.tags}
+                     <div><a href="{@loop.link}">{@loop.title}</a></div>
                   </div>
                </aside>
             </div>
             <div class="col-md-9 vl">
                <main>
+                  {@loop.posts}
                   <article>
-                     <h2><a href="#">Illud mollis moderatius</a></h2>
-                     <p>Eum facete intellegat ei, ut mazim melius usu. Has elit simul primis ne, regione minimum id cum. Sea deleniti dissentiet ea. Illud mollis moderatius ut per, at qui ubique populo. Eum ad cibo legimus, vim ei quidam fastidii.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">Ex ignota epicurei quo</a></h2>
-                     <p>Quo debet vivendo ex. Qui ut admodum senserit partiendo. Id adipiscing disputando eam, sea id magna pertinax concludaturque. Ex ignota epicurei quo, his ex doctus delenit fabellas, erat timeam cotidieque sit in. Vel eu soleat voluptatibus, cum cu exerci mediocritatem. Malis legere at per, has brute putant animal et, in consul utamur usu.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">His at autem inani volutpat</a></h2>
-                     <p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">Stet facilis ius te</a></h2>
-                     <p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">His at autem inani volutpat</a></h2>
-                     <p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">Stet facilis ius te</a></h2>
-                     <p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">Illud mollis moderatius</a></h2>
-                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, ipsum qui sapiente error maxime debitis odio dignissimos autem temporibus iure velit et enim delectus? Officia aperiam, eligendi inventore dolor aliquid repellendus doloribus eos provident! Vitae numquam necessitatibus fugiat quidem hic expedita ea vel harum, assumenda laudantium possimus? Eaque iste sequi ipsa sed quisquam laboriosam harum recusandae commodi eius tempora suscipit voluptatum quasi ipsam, nam similique, in doloremque corporis, perspiciatis minima placeat fugiat. Beatae voluptates accusamus odio commodi eaque. Fuga, excepturi.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">Ex ignota epicurei quo</a></h2>
-                     <p>Quo debet vivendo ex. Qui ut admodum senserit partiendo. Id adipiscing disputando eam, sea id magna pertinax concludaturque. Ex ignota epicurei quo, his ex doctus delenit fabellas, erat timeam cotidieque sit in. Vel eu soleat voluptatibus, cum cu exerci mediocritatem. Malis legere at per, has brute putant animal et, in consul utamur usu.</p>
-                  </article>
-                  <article>
-                     <h2><a href="#">His at autem inani volutpat</a></h2>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat a, distinctio sapiente vel temporibus perspiciatis eaque deserunt alias sequi cupiditate nesciunt voluptatibus ipsam quo delectus aliquam odit obcaecati numquam corrupti autem eius pariatur ea quod? Sapiente ex facere dolorum, saepe, doloribus maxime voluptas provident iure quam, enim nisi vitae sequi necessitatibus nostrum eveniet voluptates. Explicabo, ullam ratione quis atque dignissimos ipsam? Ipsa culpa provident reiciendis sit pariatur mollitia nisi ullam enim cum omnis architecto dolores, eius quos? Modi fugit animi magni assumenda dicta deserunt corporis quas esse vitae corrupti, perspiciatis accusamus dolorum ducimus molestias qui cupiditate reprehenderit quaerat unde. Nisi.</p>
+                     <h2><a href="{@loop.link}">{@loop.title}</a></h2>
+                     <p>{@loop.description}</p>
                   </article>
                </main>	  
                
@@ -161,10 +112,10 @@
                      </div>
                      <div class="row">
                         <div class="col">
-                           &copy; Fernando Prass 2023 | Licensed under MIT
+                           {:copyright}
                         </div>
                         <div class="col">
-                           Generater by Kennis
+                           {:generate.by}
                         </div>
                      </div>
                   </div>
