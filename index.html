@@ -12,8 +12,9 @@
    <meta name="keywords" content="{@site.keywords}" />
    <meta name = "revised" content="{@site.modified}" />
 
-   <link rel="stylesheet" href="/assets/css/header.css" />
-   <link rel="stylesheet" href="/assets/css/style.css" />
+   <link rel="stylesheet" href="/assets/css/style-header.css">
+   <link rel="stylesheet" href="/assets/css/style-aside.css">
+   <link rel="stylesheet" href="/assets/css/style-main.css">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
@@ -60,30 +61,30 @@
          <div class="row">
             <div class="col-md-3">
                <aside class="text-left">                     
-                  <div class="avatar text-center">
+                  <div class="aside-avatar text-center">
                      <img src="{@author.avatar}">
                   </div>
                   
-                  <div class="bio">
+                  <div class="aside-bio">
                      {@author.bio}
                   </div>
 
-                  <div class="location">
+                  <div class="aside-location">
                      <i class="fa-solid fa-location-dot"></i> {@author.location}
                   </div>
 
-                  <div class="categories">                      
-                     <div class="title"><i class="fa-solid fa-folder-tree"></i> {:archive}</div>
+                  <div>                      
+                     <div class="aside-title"><i class="fa-solid fa-folder-tree aside-icon"></i> {:archive}</div>
                      {@loop.blog.archive}
                   </div>
 
-                  <div class="categories">
-                     <div class="title"><i class="fa-solid fa-list-ul"></i> {:categories}</div>
+                  <div>
+                     <div class="aside-title"><i class="fa-solid fa-list-ul aside-icon"></i> {:categories}</div>
                      {@loop.blog.categories}
                   </div>
 
-                  <div class="tags">
-                     <div class="title"><i class="fa-solid fa-tags"></i> {:tags}</div>
+                  <div>
+                     <div class="aside-title"><i class="fa-solid fa-tags aside-icon"></i> {:tags}</div>
                      {@loop.blog.tags}
                   </div>
                </aside>
