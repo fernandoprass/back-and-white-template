@@ -1,9 +1,12 @@
 {
    "about" : "Sobre",
    "archive" : "Arquivo",
+   "category" : "Categoria",
    "categories" : "Categorias",
    "copyright" : "&copy;  Fernando Prass 2023 | Licenciado sobre MIT",
    "generate.by" : "Gerado por Kennis",
    "home" : "Página Inicial",
+   "language" : "Linguagem",
+   "tag" : "Tag",
    "tags" : "Tags"
 }
