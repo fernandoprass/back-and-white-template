@@ -1,0 +1,48 @@
+aside {
+   padding-top: 40px;
+   border-right: 01pt;
+   height: 100%;
+   float: left;
+   z-index: 1;
+   width:299px;
+}
+
+ aside a {
+    padding-top: 5px;
+    text-decoration:none;
+    font-size:15px;
+    color:rgb(51, 84, 98);
+    text-decoration:none; 
+ }
+ 
+aside a:hover {
+    text-decoration:underline; 
+ }
+
+ .aside-avatar img {
+   border-radius: 100%;
+}
+
+ .aside-bio{
+   color: rgb(57, 57, 57);
+   font-style: italic;
+   padding-top: 15px;
+   padding-bottom: 5px;
+}
+
+.aside-icon {
+    font-size:14px;
+ }
+
+.aside-location{
+    color: rgb(57, 57, 57);
+    font-weight:bold;
+    margin-top: 15px;
+ }
+
+ .aside-title {
+   margin-left: 5px;
+   margin-top: 15px;
+   font-size:18px;
+   font-weight:bold;
+}
