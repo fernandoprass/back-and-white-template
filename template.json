@@ -1,33 +1,28 @@
 {
-	"Languages": ["en", "pt-br"],
-	"IndexHtmlFiles": [{
-			"Order": "1",
-			"FileName": "head.html",
-			"ProcessOnlyOneTime" : false 
+	"Languages": [ "en", "pt-br" ],
+	"Index": [
+		{
+			"Order": 1,
+			"FileName": "index.html",
+			"ProcessOnlyOnce": false
 		},
 		{
-			"Order": "2",
-			"FileName": "header.html",
-			"ProcessOnlyOneTime" : false 
-		},
-		{
-			"Order": "3",
-			"FileName": "page.html",
-			"ProcessOnlyOneTime" : false 
+			"Order": 2,
+			"FileName": "index.footer.html",
+			"ProcessOnlyOnce": true
 		}
 	],
-	"BlogHtmlFiles": "",
-	"ContecListHtmlFiles": "",
-	"LoopsHtmlFiles": {
+	"Blog": null,
+	"Post": null,
+	"Loops": {
 		"BlogArchive": "loop.blog.archive.html",
 		"BlogCategories": "loop.blog.categories.html",
-		"BlogPostLast10": "loop.blog.last10.html",
+		"BlogPostLast10": "loop.blog.posts.last10.html",
+		"BlogPostLast5": null,
+		"BlogPostLast3": null,
+		"BlogPosts": null,
 		"BlogTags": "loop.blog.tags.html",
-		"Languages": "loop.languages.html",
-		"SocialMedia": "loop.socialMedia.html",
-		"Menus": [{
-			"Name": "main",
-			"FileName": "loop.menu.main.html"
-		}]
+		"Menu": "loop.menu.html",
+		"SocialMedia": "loop.socialMedia.html"
 	}
 }
