@@ -1,9 +1,12 @@
 {
 	"Languages": [ "en", "pt-br" ],
 	"Index": "index.html",
-	"Blog": null,
 	"Page": null,
-	"Post": null,
+	"Blog": null,
+	"BlogArchive": null,
+	"BlogCategories": null,
+	"BlogPost": null,
+	"BlogTags": null,
 	"Loops": {
 		"BlogArchive": "loop.blog.archive.html",
 		"BlogCategories": "loop.blog.categories.html",
