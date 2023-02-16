@@ -1,0 +1,20 @@
+Languages:
+- en
+- pt-br
+Index: index.html
+Page:
+Blog:
+BlogArchive:
+BlogCategories:
+BlogPost:
+BlogTags:
+Loops:
+  BlogArchive: loop.blog.archive.html
+  BlogCategories: loop.blog.categories.html
+  BlogPostLast10: loop.blog.posts.last10.html
+  BlogPostLast5:
+  BlogPostLast3:
+  BlogPosts:
+  BlogTags: loop.blog.tags.html
+  Menu: loop.menu.html
+  SocialMedia: loop.socialMedia.html
