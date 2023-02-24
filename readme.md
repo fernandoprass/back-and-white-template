@@ -6,5 +6,6 @@ This is the demo template for Kennis. It is not intended to be the best template
 
 1. Type of pages that are render
 2. Loop files
-3. Tags available
-4. Internationalization
+3. Available tags
+4. Template configuration file
+5. Internationalization
