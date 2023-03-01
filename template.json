@@ -15,6 +15,7 @@
 		"BlogPostLast3": null,
 		"BlogPosts": null,
 		"BlogTags": "loop.blog.tags.html",
+		"Languages": "loop.languages.html",
 		"Menu": "loop.menu.html",
 		"SocialMedia": "loop.socialMedia.html"
 	}
