@@ -65,13 +65,24 @@
                   <div class="avatar text-center">
                      <img src="{@author.avatar}" alt="{@author.name}">
                   </div>
-                  
-                  <div class="aside-bio">
-                     {@author.bio}
-                  </div>
 
                   <div class="aside-location">
                      <i class="fa-solid fa-location-dot"></i> {@author.location}
+                  </div>
+
+                  <div>                      
+                     <div class="aside-title"><i class="fa-solid fa-folder-tree aside-icon"></i> {:archive}</div>
+                     {@loop.blog.archive}
+                  </div>
+
+                  <div>
+                     <div class="aside-title"><i class="fa-solid fa-list-ul aside-icon"></i> {:categories}</div>
+                     {@loop.blog.categories}
+                  </div>
+
+                  <div>
+                     <div class="aside-title"><i class="fa-solid fa-tags aside-icon"></i> {:tags}</div>
+                     {@loop.blog.tags}
                   </div>
                </aside>
             </div>

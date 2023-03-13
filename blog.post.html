@@ -6,11 +6,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta name="robots" content="index, follow" />
 
-   <title>{@site.title}</title>
-   <meta name="description" content="{@site.description}" />
+   <title>{@content.title}</title>
+   <meta name="description" content="{@content.description}" />
    <meta name="author" content="{@author.name}" />
-   <meta name="keywords" content="{@site.keywords}" />
-   <meta name = "revised" content="{@site.modified}" />
+   <meta name="keywords" content="{@content.keywords}" />
+   <meta name = "revised" content="{@content.created}" />
 
    <link rel="stylesheet" href="/assets/css/style-header.css">
    <link rel="stylesheet" href="/assets/css/style-aside.css">
@@ -65,19 +65,39 @@
                   <div class="avatar text-center">
                      <img src="{@author.avatar}" alt="{@author.name}">
                   </div>
-                  
-                  <div class="aside-bio">
-                     {@author.bio}
-                  </div>
 
                   <div class="aside-location">
                      <i class="fa-solid fa-location-dot"></i> {@author.location}
+                  </div>
+
+                  <div>                      
+                     <div class="aside-title"><i class="fa-solid fa-folder-tree aside-icon"></i> {:archive}</div>
+                     {@loop.blog.archive}
+                  </div>
+
+                  <div>
+                     <div class="aside-title"><i class="fa-solid fa-list-ul aside-icon"></i> {:categories}</div>
+                     {@loop.blog.categories}
+                  </div>
+
+                  <div>
+                     <div class="aside-title"><i class="fa-solid fa-tags aside-icon"></i> {:tags}</div>
+                     {@loop.blog.tags}
                   </div>
                </aside>
             </div>
             <div class="col-md-9 vl">
                <main>
-                  {@loop.blog.posts.last10}
+                  <h1>{@content.title}</h1>
+
+                  <div>{:published.in} {@content.created}</div>
+                  <div>{:categories} {@content.categories}</div>
+
+                  <hr>
+
+                  <div>{@content.text}</div>
+
+                  <div>{:tags} {@content.tags}</div>
                </main>	  
                
                <footer>

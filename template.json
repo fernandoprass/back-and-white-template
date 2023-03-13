@@ -2,10 +2,10 @@
 	"Languages": [ "en", "pt-br" ],
 	"Index": "index.html",
 	"Page": null,
-	"Blog": null,
+	"Blog": "blog.html",
 	"BlogArchive": null,
 	"BlogCategories": null,
-	"BlogPost": null,
+	"BlogPost": "blog.post.html",
 	"BlogTags": null,
 	"Loops": {
 		"BlogArchive": "loop.blog.archive.html",
