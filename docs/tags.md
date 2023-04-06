@@ -13,7 +13,7 @@ Kennis has tags three different origns: site, author, and content (what can be a
 |:-----------------|:-----:|:--------------:|:------------:|:----------------:|:---------:|:----------:|
 | @site.baseUrl    |X      |X               |X             |X                 |X          |X           |
 | @site.deployed   |X      |X               |X             |X                 |X          |X           |
-| @site.description|X      |X               |X             |X                 |X          |            
+| @site.description|X      |X               |X             |X                 |X          |            |
 | @site.title      |X      |X               |X             |X                 |X          |            |
 | @site.keywords   |X      |X               |X             |X                 |X          |            |
 | @site.language   |X      |X               |X             |X                 |X          |X           |
@@ -24,7 +24,7 @@ Kennis has tags three different origns: site, author, and content (what can be a
 
 ## Author
 
-Author provides infomation about the author of the site, also the tag site, it came from the project configuration file.
+**Author** provides infomation about the author of the site, also the tag site, it came from the project configuration file.
 
 | Author Tags      | Index |Blog - Post List|Blog - Archive| Blog - Categories|Blog - Tags|Blog - Posts|
 |:-----------------|:-----:|:--------------:|:------------:|:----------------:|:---------:|:----------:|
@@ -33,3 +33,17 @@ Author provides infomation about the author of the site, also the tag site, it c
 | @author.email    |X      |X               |X             |X                 |X          |X           |
 | @author.location |X      |X               |X             |X                 |X          |X           |
 | @author.name     |X      |X               |X             |X                 |X          |X           |
+
+
+## Content
+
+**Content** provides infomation about the contenrt, what can be a page or a post, it came from the header of content .md file.
+
+| Content Tags        | Index |Blog - Post List|Blog - Archive| Blog - Categories|Blog - Tags|Blog - Posts|
+|:--------------------|:-----:|:--------------:|:------------:|:----------------:|:---------:|:----------:|
+| @content.title      |       |                |              |                  |           |X           |
+| @content.subtitle   |       |                |              |                  |           |X           |
+| @content.description|       |                |              |                  |           |X           |
+| @content.keywords   |       |                |              |                  |           |X           |
+| @content.created    |       |                |              |                  |           |X           |
+| @content.updated    |       |                |              |                  |           |X           |
